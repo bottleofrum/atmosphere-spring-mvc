@@ -10,6 +10,7 @@ $(function(){
     request.onReconnect =  function() { $.atmosphere.log('info', ['socket reconnect']); };
 
     request.onMessage = function(message) {
+        console.log("M:",message);
         $('#messages').append('<div>'+message.responseBody+'</div>')
     }
 
